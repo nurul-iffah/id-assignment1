@@ -51,12 +51,14 @@ body {
     margin-top: 10px;
 }
 
+/* Meet the members container */
 .main-container {
     display: flex; 
     width: 100%;
     flex-wrap: wrap;
 }
 
+/* Meet the members flex item */
 .main-flex {
     padding: 2%;
     flex-grow: 1;
@@ -67,18 +69,21 @@ body {
     justify-content: space-around;
 }
 
+/* Images container */
 .img-container {
     position: relative;
     width: 50%;
     max-width: 300px;
 }
 
+/* Styling Meet the members Image */
 .member-image {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
+/* Overlay effect for their names */
 .overlay {
     position: absolute;
     bottom: 0;
@@ -92,29 +97,16 @@ body {
     font-size: 20px;
     padding: 20px;
     text-align: center;
-}
-
-.img-container:hover .overlay {
-    opacity: 1;
-}
-/* .main-imgcrop {
-    width: 200px; 
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
     border: 1px solid;
 }
 
-.prof-pic {
-    display: inline;
-    margin: 0 auto;
-    height: 100%;
-    width: auto;
-} */
+/* Styling for hovering image */
+.img-container:hover .overlay {
+    opacity: 1;
+}
 
 /* Styling for all heading 3 */
-h3 {
+h2 {
     font-size: 35px;
 }
 
@@ -214,7 +206,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #E2D48E;
 }
 /* Styling for footer */
 footer {

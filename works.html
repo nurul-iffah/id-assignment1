@@ -10,6 +10,7 @@
         <link href="social.html" rel="stylesheet">
     </head>
     <body>
+        <!-- Header for Website includes title, picture and nav bar -->
         <header class="header">
             <h1> Discography </h1>
             <nav>
@@ -20,7 +21,7 @@
         </header>
 
         <!-- Albums -->
-        <h3>Albums Produced</h3>
+        <h2>Albums Produced</h2>
         <div class="a-container">
             <div class="a-flex">
                 <div class="flip-image">
@@ -160,22 +161,37 @@
         </div>
         <!-- Youtube Videos -->
         <div class="center">
-            <h3>Latest Song</h3>
-            <video controls>
+            <h2>Latest Song</h2>
+            <video id= "video1" controls>
                 <source src="videos/japanesesong.mp4" type="video/mp4" alt="Latest Song">
             </video>
-            <h3>Rock With You</h3>
+            <br>
+            <button onclick="playPause()">Play/Pause</button>
+            <h2>Rock With You</h2>
             <video controls>
                 <source src="videos/rock with you.mp4" type="video/mp4" alt="Rock With You">
             </video>
-            <h3>Going Seventeen</h3>
+            <br>
+            <h2>Going Seventeen</h2>
             <video controls>
                 <source src="videos/goingseventeen.mp4" type="video/mp4" alt="Latest Going Seventeen">
             </video>
+            <br>
         </div>
+        <!-- Javascript for Play and Pause Video -->
+        <script>
+            var myVideo = document.getElementById("video1");
+            
+            function playPause() {
+                if (myVideo.paused)
+                    myVideo.play();
+                else
+                    myVideo.pause();
+            }
+        </script>
+     
         <footer>
             <p> &copy; Copyright 2021, Nurul Iffah </p> 
         </footer>
-
     </body>
 </html>
