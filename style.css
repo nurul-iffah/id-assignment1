@@ -1,23 +1,29 @@
+/* Universal styling */
 * {
     box-sizing: border-box;
     max-width: 100%;
 }
 
+/* Styling for body */
 body {
     padding: 10px;
     background-color: #f7f8e3;
 }
 
+/* Styling for header's heading */
 .header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 60px;
+    font-size: 80px;
     text-align: center;
-}
-.header nav {
+} 
+
+/* Styling for header's navigation bar */
+.header nav{
     background:rgb(173, 126, 68);
     overflow: hidden;
 }
 
+/* Styling for links inside navigation bar */
 .header nav a {
     float: left;
     display: block;
@@ -28,35 +34,189 @@ body {
     font-size: 17px;
 }
 
+/* To change the color of links when hovering */
 .header a:hover {
     background-color: #ddd;
     color: black;
 }
 
+/* Styling for current link in navigation bar */
 .header a.active {
     background-color: #c7b133;
     color: white;
 }
 
-.group {
-    background-image: url(/images/seventeen-group.jpg);
+/* Styling for image in header */
+.header img {
+    margin-top: 10px;
+}
+
+.main-container {
+    display: flex; 
     width: 100%;
-    /* To center and scale image */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    flex-wrap: wrap;
+}
 
-    /* To position the navbar */
+.main-flex {
+    padding: 2%;
+    flex-grow: 1;
+    flex-basis: 15%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.img-container {
     position: relative;
+    width: 50%;
+    max-width: 300px;
 }
 
-/* Position the navbar container inside the image */
-.nav-container {
+.member-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
     position: absolute;
-    margin: 20px;
-    width: auto;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
 }
 
+.img-container:hover .overlay {
+    opacity: 1;
+}
+/* .main-imgcrop {
+    width: 200px; 
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.prof-pic {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+} */
+
+/* Styling for all heading 3 */
+h3 {
+    font-size: 35px;
+}
+
+/* Styling for all heading 4 */
+h4 {
+    font-size: 35px;
+}
+
+/* Albums images with 3D Flip Image with Text */
+/* Album Flip Image Container */
+.flip-image {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #f1f1f1;   /* To show the flip itself goes out of the box on hover */
+    perspective: 1000px;   /* For 3D effect */
+}
+
+/* To position the front and back side */
+.flip-image-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* For horizontal flip when move the mouse over the flip image container */
+.flip-image:hover .flip-image-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-image-front, .flip-image-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style the front side */
+.flip-image-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-image-back {
+    background-color: rgb(207, 151, 81);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Styling for paragraph */
+p {
+    color: white;
+    padding: 12px;
+}
+
+/* Styling for video  */
+video {
+    width: 75%;
+    height: 70%;
+    
+}
+
+/* Album section container */
+.a-container {
+    display: flex; 
+    width: 100%; 
+    flex-wrap: wrap;
+}
+
+/* Flex item for Album section container */
+.a-flex {
+    padding: 2%;
+    flex-grow: 1;
+    flex-basis: 15%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+/* Styling for footer */
 footer {
     background-color: rgb(173, 126, 68);
     font-size: 18px;
